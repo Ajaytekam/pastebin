@@ -15,7 +15,7 @@ A [PasteBin](https://en.wikipedia.org/wiki/Pastebin) app to share your codes/not
 
 ###  Usage :  
 
-* Install docker and docker compose.
+* Install docker and docker-compose.
 * Close the repository
 * Change directory to pastebin, then run `docker-compose up` command 
 * Now browse to the `http://localhost:8100/webapp/`
