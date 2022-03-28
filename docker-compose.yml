@@ -1,0 +1,35 @@
+version: '3.3'
+
+services: 
+  mysql:
+    image: mysql:8.0.0   
+    container_name: mysql8   
+    volumes:
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    environment:
+      - MYSQL_ROOT_PASSWORD=passw123
+      - MYSQL_DATABASE=pastebin
+    ports:
+      - "9906:3306"
+    restart: always
+
+  website:     
+    container_name: php73   
+    build:    
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - MYSQL_DBHOST=mysql 
+      - MYSQL_DBPORT=3306  
+      - MYSQL_DBUSER=root 
+      - MYSQL_DBPASS=passw123
+      - MYSQL_DBNAME=pastebin  
+    ports:
+      - "8100:80"
+      - "8183:443"
+    depends_on:
+      - mysql 
+    stdin_open: true  # enable -i option
+    tty: true         # enable -t option
+#   stdin_open: true  # enable -i option
+#   tty: true         # enable -t option
