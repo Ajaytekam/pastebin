@@ -1,6 +1,6 @@
 ## PasteBin App 
 
-A [PasteBin](https://en.wikipedia.org/wiki/Pastebin) app to share your codes/notes with other people. The App is entirely written in code php with mysql as database. 
+A [PasteBin](https://en.wikipedia.org/wiki/Pastebin) app to share your codes/notes with other people. The App is entirely written in core php with mysql as database. 
 
 ### Features :  
 
@@ -16,9 +16,9 @@ A [PasteBin](https://en.wikipedia.org/wiki/Pastebin) app to share your codes/not
 ###  Usage :  
 
 * Install docker and docker-compose.
-* Close the repository
+* Clone the repository
 * Change directory to pastebin, then run `docker-compose up` command 
-* Now browse to the `http://localhost:8100/webapp/`
+* Now browse the app at `http://localhost:8100/webapp/`
 
 ### Library Used 
 
